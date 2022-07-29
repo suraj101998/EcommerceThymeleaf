@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Create New Product</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div align="center" class="container">
+		<h1>Create New Product</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${product}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>Product ID:</td>
+					<td><input type="text" th:field="*{id}" /></td>
+				</tr>
+				<tr>
+					<td>sku:</td>
+					<td><input type="text" th:field="*{sku}" /></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" th:field="*{name}" /></td>
+				</tr>
+				<tr>
+					<td>Description:</td>
+					<td><input type="text" th:field="*{description}" /></td>
+				</tr>
+				<tr>
+					<td>UnitPrice:</td>
+					<td><input type="text" th:field="*{unitprice}" /></td>
+				</tr>
+				<tr>
+					<td>ImageUrl:</td>
+					<td><input type="text" th:field="*{imageurl}" /></td>
+				</tr>
+				<tr>
+					<td>UnitsOfStock:</td>
+					<td><input type="text" th:field="*{unitsofstock}" /></td>
+				</tr>
+				<tr>
+					<td>DateCreated:</td>
+					<td><input type="text" th:field="*{datecreated}" /></td>
+				</tr>
+				<tr>
+					<td>LastUpdated:</td>
+					<td><input type="text" th:field="*{lastupdated}" /></td>
+				</tr>
+				<tr>
+					<td>CategoryId:</td>
+					<td><input type="text" th:field="*{categoryid}" /></td>
+				</tr>								
+				<tr>
+					<td colspan="2"><button type="submit" class="btn btn-info col-6">Save Product</button> </td>
+				</tr>
+			</table>
+		</form>
+		<hr>
+		
+		<a th:href = "@{/}"> Back to Product List</a>
+	</div>
+</body>
+</html>
